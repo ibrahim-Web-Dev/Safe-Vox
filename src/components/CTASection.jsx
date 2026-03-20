@@ -77,7 +77,7 @@ export default function CTASection() {
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </Link>
                         <a
-                            href="mailto:ibrahimyilmaz0713@gmail.com"
+                            href="mailto:info@safevox.tr"
                             className="flex items-center justify-center gap-2 px-8 py-4 bg-white/5 border border-white/10 rounded-xl font-bold text-white hover:bg-white/8 hover:-translate-y-0.5 transition-all"
                         >
                             <Mail className="w-5 h-5" />

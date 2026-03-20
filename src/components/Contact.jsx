@@ -15,7 +15,7 @@ const socialLinks = [
 ];
 
 const contactItems = [
-    { Icon: Mail,   href: 'mailto:ibrahimyilmaz0713@gmail.com', text: 'ibrahimyilmaz0713@gmail.com' },
+    { Icon: Mail,   href: 'mailto:info@safevox.tr', text: 'info@safevox.tr' },
     { Icon: Phone,  href: 'tel:+905511587145',                  text: '0551 158 71 45' },
     { Icon: MapPin, href: null,                                  text: 'Çankaya, Ankara' },
 ];

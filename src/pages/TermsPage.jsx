@@ -36,7 +36,7 @@ const sections = [
     },
     {
         title: '9. İletişim',
-        content: `Bu Kullanım Koşulları hakkındaki sorularınız için:\n\nE-posta: ibrahimyilmaz0713@gmail.com\nTelefon: 0551 158 71 45\nAdres: Çankaya, Ankara`,
+        content: `Bu Kullanım Koşulları hakkındaki sorularınız için:\n\nE-posta: info@safevox.tr\nTelefon: 0551 158 71 45\nAdres: Çankaya, Ankara`,
     },
 ];
 

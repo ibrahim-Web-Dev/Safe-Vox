@@ -24,7 +24,7 @@ const sections = [
     },
     {
         title: '6. Haklarınız',
-        content: `KVKK kapsamında aşağıdaki haklara sahipsiniz:\n\n• Verilerinizin işlenip işlenmediğini öğrenme\n• İşlenmişse buna ilişkin bilgi talep etme\n• İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme\n• Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme\n• Eksik veya yanlış işlenmiş verilerin düzeltilmesini isteme\n• Verilerin silinmesini veya yok edilmesini talep etme\n• Kişisel veri işlenmesi sebebiyle uğradığınız zararın tazmin edilmesini isteme\n\nBu haklarınızı kullanmak için ibrahimyilmaz0713@gmail.com adresine yazabilirsiniz.`,
+        content: `KVKK kapsamında aşağıdaki haklara sahipsiniz:\n\n• Verilerinizin işlenip işlenmediğini öğrenme\n• İşlenmişse buna ilişkin bilgi talep etme\n• İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme\n• Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme\n• Eksik veya yanlış işlenmiş verilerin düzeltilmesini isteme\n• Verilerin silinmesini veya yok edilmesini talep etme\n• Kişisel veri işlenmesi sebebiyle uğradığınız zararın tazmin edilmesini isteme\n\nBu haklarınızı kullanmak için info@safevox.tr adresine yazabilirsiniz.`,
     },
     {
         title: '7. Çerezler (Cookies)',
@@ -36,7 +36,7 @@ const sections = [
     },
     {
         title: '9. İletişim',
-        content: `Gizlilik ile ilgili sorularınız için:\n\nE-posta: ibrahimyilmaz0713@gmail.com\nTelefon: 0551 158 71 45\nAdres: Çankaya, Ankara`,
+        content: `Gizlilik ile ilgili sorularınız için:\n\nE-posta: info@safevox.tr\nTelefon: 0551 158 71 45\nAdres: Çankaya, Ankara`,
     },
 ];
 

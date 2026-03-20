@@ -4,7 +4,7 @@ import { Shield } from 'lucide-react';
 const sections = [
     {
         title: '1. Veri Sorumlusu',
-        content: `6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca kişisel verileriniz; veri sorumlusu sıfatıyla SafeVox tarafından aşağıda açıklanan kapsamda işlenmektedir.\n\nVeri Sorumlusu: SafeVox\nAdres: Çankaya, Ankara\nE-posta: ibrahimyilmaz0713@gmail.com\nTelefon: 0551 158 71 45`,
+        content: `6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca kişisel verileriniz; veri sorumlusu sıfatıyla SafeVox tarafından aşağıda açıklanan kapsamda işlenmektedir.\n\nVeri Sorumlusu: SafeVox\nAdres: Çankaya, Ankara\nE-posta: info@safevox.tr\nTelefon: 0551 158 71 45`,
     },
     {
         title: '2. İşlenen Kişisel Veriler',
@@ -32,7 +32,7 @@ const sections = [
     },
     {
         title: '8. Başvuru Yöntemi',
-        content: `Yukarıda belirtilen haklarınızı kullanmak için;\n\nE-posta: ibrahimyilmaz0713@gmail.com\nAdres: Çankaya, Ankara\n\nüzerinden kimliğinizi doğrulayan belgelerle birlikte yazılı başvuruda bulunabilirsiniz. Başvurularınız en geç 30 (otuz) gün içinde ücretsiz olarak sonuçlandırılacaktır. İşlemin ayrıca bir maliyet gerektirmesi hâlinde Kişisel Verileri Koruma Kurulu tarafından belirlenen tarife üzerinden ücret talep edilebilir.`,
+        content: `Yukarıda belirtilen haklarınızı kullanmak için;\n\nE-posta: info@safevox.tr\nAdres: Çankaya, Ankara\n\nüzerinden kimliğinizi doğrulayan belgelerle birlikte yazılı başvuruda bulunabilirsiniz. Başvurularınız en geç 30 (otuz) gün içinde ücretsiz olarak sonuçlandırılacaktır. İşlemin ayrıca bir maliyet gerektirmesi hâlinde Kişisel Verileri Koruma Kurulu tarafından belirlenen tarife üzerinden ücret talep edilebilir.`,
     },
 ];
 

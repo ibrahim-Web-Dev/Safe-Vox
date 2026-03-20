@@ -6,8 +6,8 @@ const contactInfo = [
     {
         icon: <Mail className="w-6 h-6 text-safe-400" />,
         label: 'E-posta',
-        value: 'ibrahimyilmaz0713@gmail.com',
-        href: 'mailto:ibrahimyilmaz0713@gmail.com',
+        value: 'info@safevox.tr',
+        href: 'mailto:info@safevox.tr',
     },
     {
         icon: <Phone className="w-6 h-6 text-vox-400" />,
@@ -37,7 +37,7 @@ export default function ContactPage() {
         setLoading(true);
         // Mailto fallback — no backend needed for static hosting
         const body = `Ad Soyad: ${form.name}%0AŞirket: ${form.company}%0ATelefon: ${form.phone}%0AKonu: ${form.subject}%0A%0AMesaj:%0A${form.message}`;
-        window.location.href = `mailto:ibrahimyilmaz0713@gmail.com?subject=SafeVox - ${encodeURIComponent(form.subject)}&body=${body}`;
+        window.location.href = `mailto:info@safevox.tr?subject=SafeVox - ${encodeURIComponent(form.subject)}&body=${body}`;
         setTimeout(() => {
             setLoading(false);
             setSubmitted(true);
