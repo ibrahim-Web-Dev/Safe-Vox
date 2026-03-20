@@ -1,0 +1,282 @@
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { UserCheck, Heart, Zap, Target, Eye, Shield, ArrowRight, CheckCircle } from 'lucide-react';
+
+const values = [
+    {
+        icon: <Heart className="w-7 h-7 text-red-400" />,
+        title: 'İnsan Odaklılık',
+        desc: 'Teknolojiyi bir araç olarak görüyoruz. Asıl değer, insanların potansiyelini açığa çıkarmaktır.',
+    },
+    {
+        icon: <Shield className="w-7 h-7 text-safe-400" />,
+        title: 'Güven & Şeffaflık',
+        desc: 'KVKK tam uyumu ve açık veri politikasıyla çalışanların ve kurumların güvenini kazanırız.',
+    },
+    {
+        icon: <Zap className="w-7 h-7 text-yellow-400" />,
+        title: 'Sürekli Gelişim',
+        desc: 'Statik çözümler değil, öğrenen ve gelişen bir yapay zeka ekosistemi sunuyoruz.',
+    },
+    {
+        icon: <Target className="w-7 h-7 text-vox-400" />,
+        title: 'Ölçülebilir Etki',
+        desc: 'Her özelliğimizi somut iş çıktılarıyla destekliyoruz. Soyut vaatler değil, gerçek veriler.',
+    },
+];
+
+const milestones = [
+    {
+        year: '2025',
+        title: 'Fikrin Doğuşu',
+        desc: 'Çağrı merkezlerindeki örneklem bazlı, öznel denetim sorununu çözmek için SafeVox konsepti geliştirildi.',
+    },
+    {
+        year: '2025',
+        title: 'İlk Prototip',
+        desc: 'Akustik ve semantik analiz modeli test ortamında başarıyla çalıştırıldı; %100 çağrı kapsama hedefine ulaşıldı.',
+    },
+    {
+        year: '2025',
+        title: 'KVKK Altyapısı',
+        desc: 'Hassas veri maskeleme (TCKN, telefon) ve tam KVKK uyum katmanı tamamlandı. Sıfır veri ihlali kaydedildi.',
+    },
+    {
+        year: '2026',
+        title: 'Turkcell Yarının Teknoloji Liderleri',
+        desc: "SafeVox, Turkcell'in prestijli 'Yarının Teknoloji Liderleri' programına seçilerek ulusal sahneye taşındı.",
+    },
+];
+
+export default function AboutPage() {
+    return (
+        <div className="pt-24 bg-dark-900 min-h-screen">
+            {/* Hero Banner */}
+            <section className="relative py-24 overflow-hidden">
+                <div className="absolute inset-0 pointer-events-none">
+                    <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-safe-600/15 rounded-full blur-[120px]" />
+                    <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-vox-600/15 rounded-full blur-[120px]" />
+                </div>
+                <div className="max-w-7xl mx-auto px-6 relative z-10">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7 }}
+                        className="text-center max-w-3xl mx-auto"
+                    >
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-safe-500/10 border border-safe-500/20 text-safe-400 text-sm font-medium mb-6">
+                            <UserCheck className="w-4 h-4" />
+                            Hakkımızda
+                        </div>
+                        <h1 className="text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
+                            Yapay Zekayı{' '}
+                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-safe-400 to-vox-400">
+                                İnsanın Yanına
+                            </span>{' '}
+                            Koyduk
+                        </h1>
+                        <p className="text-xl text-gray-400 leading-relaxed">
+                            SafeVox, çağrı merkezi temsilcilerini denetleyen değil,
+                            geliştiren bir yapay zeka platformu olarak doğdu. Amacımız tek:
+                            teknolojiyi insanın lehine çalıştırmak.
+                        </p>
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* Mission & Vision */}
+            <section className="py-20 bg-dark-800">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="grid lg:grid-cols-2 gap-12">
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.7 }}
+                            className="bg-dark-900/60 border border-white/8 rounded-3xl p-10"
+                        >
+                            <div className="w-14 h-14 bg-safe-500/15 rounded-2xl flex items-center justify-center mb-6">
+                                <Target className="w-7 h-7 text-safe-400" />
+                            </div>
+                            <h2 className="text-3xl font-bold text-white mb-4">Misyonumuz</h2>
+                            <p className="text-gray-400 text-lg leading-relaxed">
+                                Çağrı merkezlerinde geleneksel, cezalandırıcı denetim anlayışını ortadan kaldırmak;
+                                yerine veriye dayalı, empatik ve kişiselleştirilmiş bir koçluk deneyimi sunmak.
+                                Her temsilcinin en iyi versiyonuna ulaşmasını sağlamak.
+                            </p>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.7 }}
+                            className="bg-dark-900/60 border border-white/8 rounded-3xl p-10"
+                        >
+                            <div className="w-14 h-14 bg-vox-500/15 rounded-2xl flex items-center justify-center mb-6">
+                                <Eye className="w-7 h-7 text-vox-400" />
+                            </div>
+                            <h2 className="text-3xl font-bold text-white mb-4">Vizyonumuz</h2>
+                            <p className="text-gray-400 text-lg leading-relaxed">
+                                Türkiye'nin çağrı merkezi sektöründe yapay zeka destekli koçluğun standart hale
+                                geldiği bir gelecek inşa etmek. Çalışan memnuniyeti ve operasyonel verimlilik
+                                arasındaki denklemi yeniden yazmak.
+                            </p>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Story Section */}
+            <section className="py-20 bg-dark-900">
+                <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+                    <motion.div
+                        initial={{ opacity: 0, x: -40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                            Geleneksel Denetimi Kıran{' '}
+                            <span className="text-safe-400">Bir Fikrin Hikayesi</span>
+                        </h2>
+                        <p className="text-gray-400 text-lg leading-relaxed mb-6">
+                            Çağrı merkezlerinde yaşanan en büyük sorunlardan biri, kalite denetiminin hâlâ
+                            örneklem bazlı ve öznel kalmasıydı. Yüzlerce çağrıdan sadece 3-4 tanesi dinleniyor,
+                            değerlendirme kişiden kişiye değişiyordu.
+                        </p>
+                        <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                            SafeVox bu körlüğe son vermek için tasarlandı. Akustik analiz, duygu zekası ve
+                            otonom eğitim modülleriyle her çağrıyı değerlendiren, her temsilciye özel geri bildirim
+                            veren bir sistem. Denetim değil, gelişim.
+                        </p>
+                        <div className="space-y-3">
+                            {[
+                                '%100 çağrı kapsama — örneklem hatası yok',
+                                'Nesnel, veri odaklı değerlendirme',
+                                'Kişiye özel gelişim yolları',
+                                'KVKK uyumlu, güvenli altyapı',
+                            ].map((item, i) => (
+                                <div key={i} className="flex items-center gap-3 text-gray-300">
+                                    <CheckCircle className="w-5 h-5 text-safe-500 shrink-0" />
+                                    <span>{item}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        className="relative"
+                    >
+                        <div className="aspect-square rounded-full bg-gradient-to-tr from-safe-600 to-vox-600 opacity-15 absolute inset-0 blur-3xl" />
+                        <img
+                            src="/support-team.png"
+                            alt="SafeVox Ekibi"
+                            className="relative rounded-3xl shadow-2xl border border-white/10 w-full object-cover h-[480px]"
+                        />
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* Values */}
+            <section className="py-20 bg-dark-800">
+                <div className="max-w-7xl mx-auto px-6">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-14"
+                    >
+                        <h2 className="text-4xl font-bold mb-4">Değerlerimiz</h2>
+                        <p className="text-gray-400 text-lg max-w-xl mx-auto">
+                            Her kararımızı, her özelliğimizi bu değerler üzerine inşa ediyoruz.
+                        </p>
+                    </motion.div>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {values.map((v, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.1 }}
+                                className="bg-dark-900/70 border border-white/8 rounded-2xl p-7 hover:border-safe-500/30 transition-all"
+                            >
+                                <div className="mb-5">{v.icon}</div>
+                                <h3 className="text-lg font-bold text-white mb-2">{v.title}</h3>
+                                <p className="text-sm text-gray-400 leading-relaxed">{v.desc}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Timeline */}
+            <section className="py-20 bg-dark-900">
+                <div className="max-w-4xl mx-auto px-6">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-14"
+                    >
+                        <h2 className="text-4xl font-bold mb-4">Yolculuğumuz</h2>
+                        <p className="text-gray-400 text-lg">Fikrin doğuşundan bugüne SafeVox'un hikayesi.</p>
+                    </motion.div>
+                    <div className="relative">
+                        <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-safe-500/50 via-vox-500/30 to-transparent" />
+                        <div className="space-y-10">
+                            {milestones.map((m, i) => (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: i * 0.15 }}
+                                    className="flex gap-8"
+                                >
+                                    <div className="relative shrink-0">
+                                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-safe-600 to-vox-600 flex items-center justify-center shadow-lg shadow-safe-500/20">
+                                            <span className="text-xs font-bold text-white">{m.year}</span>
+                                        </div>
+                                    </div>
+                                    <div className="bg-dark-800 border border-white/8 rounded-2xl p-6 flex-1">
+                                        <h3 className="text-lg font-bold text-white mb-2">{m.title}</h3>
+                                        <p className="text-gray-400 text-sm leading-relaxed">{m.desc}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA */}
+            <section className="py-20 bg-dark-800">
+                <div className="max-w-3xl mx-auto px-6 text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2 className="text-4xl font-bold mb-4">Ekibimizi Tanıyın</h2>
+                        <p className="text-gray-400 text-lg mb-8">
+                            SafeVox'u hayata geçiren disiplinlerarası ekip.
+                        </p>
+                        <Link
+                            to="/ekibimiz"
+                            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-safe-600 to-vox-600 rounded-xl font-bold text-white hover:opacity-90 transition-all shadow-lg shadow-safe-500/25 group"
+                        >
+                            Ekibimizi Keşfet
+                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                    </motion.div>
+                </div>
+            </section>
+        </div>
+    );
+}
