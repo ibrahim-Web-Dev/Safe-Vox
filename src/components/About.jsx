@@ -54,7 +54,7 @@ export default function About() {
                 >
                     <div className="aspect-square rounded-full bg-gradient-to-tr from-safe-600 to-vox-600 opacity-20 absolute inset-0 blur-3xl animate-pulse" />
                     <img
-                        src="/support-team.png"
+                        src="/support-team.jpeg"
                         alt="AI Powered Customer Support Team"
                         className="relative rounded-3xl shadow-2xl border border-white/10 w-full object-cover h-[500px]"
                     />

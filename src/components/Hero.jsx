@@ -68,7 +68,10 @@ export default function Hero() {
 
                     {/* CTA buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                        <button className="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-safe-600 to-vox-600 rounded-xl font-bold text-white hover:opacity-90 hover:-translate-y-0.5 transition-all shadow-lg shadow-safe-500/25 group">
+                        <button
+                            onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
+                            className="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-safe-600 to-vox-600 rounded-xl font-bold text-white hover:opacity-90 hover:-translate-y-0.5 transition-all shadow-lg shadow-safe-500/25 group"
+                        >
                             Hemen Keşfet
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </button>

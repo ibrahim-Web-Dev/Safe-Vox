@@ -57,7 +57,7 @@ const accentMap = {
 
 export default function HowItWorks() {
     return (
-        <section className="py-28 relative overflow-hidden">
+        <section id="how-it-works" className="py-28 relative overflow-hidden">
             <div className="absolute inset-0 grid-lines pointer-events-none" />
 
             <div className="relative max-w-7xl mx-auto px-6">
