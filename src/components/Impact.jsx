@@ -3,7 +3,7 @@ import { motion, useInView } from 'framer-motion';
 
 const stats = [
     { value: 100, suffix: '%', label: 'Çağrı Analizi',    desc: 'Örneklem hatası olmadan tam kapsam.' },
-    { value: 20,  suffix: '%', label: 'Müşteri Memnuniyeti', desc: 'Duygu analizi destekli çağrılarda memnuniyet artışı.' },
+    { value: 20,  suffix: '%', label: 'Müşteri Memnuniyeti Artışı', desc: 'Duygu analizi destekli çağrılarda memnuniyet artışı.' },
     { value: 25,  suffix: '%', label: 'Turnover Azalışı',  desc: 'Çalışan bağlılığı ile düşen sirkülasyon.' },
     { value: 0,   suffix: '',  label: 'Veri İhlali',        desc: 'KVKK tam uyumlu maskeleme teknolojisi.' },
 ];

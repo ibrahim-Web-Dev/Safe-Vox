@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Linkedin, Mail, ArrowRight, Users } from 'lucide-react';
 
@@ -41,6 +42,55 @@ const team = [
     },
 ];
 
+function TeamCard({ member, index }) {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: '-80px' });
+
+    return (
+        <motion.div
+            ref={ref}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.15, duration: 0.6 }}
+            className={`group bg-gradient-to-br ${member.gradient} border border-white/8 ${member.border} rounded-3xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-safe-500/5 hover:-translate-y-2`}
+        >
+            <div className="aspect-[4/3] overflow-hidden relative">
+                <img
+                    src={member.image}
+                    alt={member.name}
+                    className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-105 ${isInView ? 'grayscale-0' : 'grayscale'}`}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-900/60 to-transparent" />
+            </div>
+            <div className="p-8">
+                <h3 className="text-2xl font-bold text-white mb-1">{member.name}</h3>
+                <p className={`text-sm font-semibold mb-4 uppercase tracking-wider ${member.accent}`}>
+                    {member.role}
+                </p>
+                <p className="text-gray-400 text-sm leading-relaxed mb-6">{member.bio}</p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                    {member.expertise.map((tag, i) => (
+                        <span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-gray-300 font-medium">
+                            {tag}
+                        </span>
+                    ))}
+                </div>
+                <div className="flex gap-4 pt-4 border-t border-white/8">
+                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm font-medium">
+                        <Linkedin className="w-4 h-4" />
+                        LinkedIn
+                    </a>
+                    <a href={`mailto:${member.email}`} className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm font-medium">
+                        <Mail className="w-4 h-4" />
+                        E-posta
+                    </a>
+                </div>
+            </div>
+        </motion.div>
+    );
+}
+
 export default function TeamPage() {
     return (
         <div className="pt-24 bg-dark-900 min-h-screen">
@@ -81,65 +131,7 @@ export default function TeamPage() {
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid md:grid-cols-3 gap-8">
                         {team.map((member, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.15, duration: 0.6 }}
-                                className={`group bg-gradient-to-br ${member.gradient} border border-white/8 ${member.border} rounded-3xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-safe-500/5 hover:-translate-y-2`}
-                            >
-                                {/* Photo */}
-                                <div className="aspect-[4/3] overflow-hidden relative">
-                                    <img
-                                        src={member.image}
-                                        alt={member.name}
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-dark-900/60 to-transparent" />
-                                </div>
-
-                                {/* Content */}
-                                <div className="p-8">
-                                    <h3 className="text-2xl font-bold text-white mb-1">{member.name}</h3>
-                                    <p className={`text-sm font-semibold mb-4 uppercase tracking-wider ${member.accent}`}>
-                                        {member.role}
-                                    </p>
-                                    <p className="text-gray-400 text-sm leading-relaxed mb-6">{member.bio}</p>
-
-                                    {/* Expertise Tags */}
-                                    <div className="flex flex-wrap gap-2 mb-6">
-                                        {member.expertise.map((tag, i) => (
-                                            <span
-                                                key={i}
-                                                className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-gray-300 font-medium"
-                                            >
-                                                {tag}
-                                            </span>
-                                        ))}
-                                    </div>
-
-                                    {/* Social Links */}
-                                    <div className="flex gap-4 pt-4 border-t border-white/8">
-                                        <a
-                                            href={member.linkedin}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm font-medium"
-                                        >
-                                            <Linkedin className="w-4 h-4" />
-                                            LinkedIn
-                                        </a>
-                                        <a
-                                            href={`mailto:${member.email}`}
-                                            className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm font-medium"
-                                        >
-                                            <Mail className="w-4 h-4" />
-                                            E-posta
-                                        </a>
-                                    </div>
-                                </div>
-                            </motion.div>
+                            <TeamCard key={index} member={member} index={index} />
                         ))}
                     </div>
                 </div>
