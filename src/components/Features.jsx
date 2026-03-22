@@ -11,7 +11,7 @@ const features = [
         border: 'hover:border-safe-500/30',
         iconBg: 'bg-safe-500/12 border-safe-500/20',
         iconColor: 'text-safe-400',
-        tag: 'Akustik AI',
+        tag: 'Akustik',
     },
     {
         icon: Smile,
@@ -22,18 +22,18 @@ const features = [
         border: 'hover:border-vox-500/30',
         iconBg: 'bg-vox-500/12 border-vox-500/20',
         iconColor: 'text-vox-400',
-        tag: 'Duygu AI',
+        tag: 'Duygu',
     },
     {
         icon: GraduationCap,
         title: 'Otonom Eğitim Modülleri',
         description:
-            "Tespit edilen eksikliklere göre Turkcell Geleceği Yazanlar'dan kişiye özel eğitim ataması yapar.",
+            'Tespit edilen eksikliklere göre çeşitli eğitim platformlarından kişiye özel kurs ataması yapar.',
         gradient: 'from-purple-500/15 to-transparent',
         border: 'hover:border-purple-500/30',
         iconBg: 'bg-purple-500/12 border-purple-500/20',
         iconColor: 'text-purple-400',
-        tag: 'Koçluk AI',
+        tag: 'Koçluk',
     },
     {
         icon: Shield,
@@ -55,7 +55,7 @@ const features = [
         border: 'hover:border-red-500/30',
         iconBg: 'bg-red-500/12 border-red-500/20',
         iconColor: 'text-red-400',
-        tag: 'Refah AI',
+        tag: 'Refah',
     },
     {
         icon: Cpu,

@@ -58,7 +58,7 @@ export default function CTASection() {
                         className="text-lg text-gray-400 mb-10 max-w-xl mx-auto"
                     >
                         SafeVox'un ücretsiz demosunu talep edin. Ekibimiz 24 saat içinde
-                        sizinle iletişime geçer.
+                        sizinle iletişime geçsin.
                     </motion.p>
 
                     {/* Buttons */}

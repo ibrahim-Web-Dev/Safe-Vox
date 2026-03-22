@@ -76,8 +76,8 @@ export default function AboutPage() {
                             Koyduk
                         </h1>
                         <p className="text-xl text-gray-400 leading-relaxed">
-                            SafeVox, çağrı merkezi temsilcilerini denetleyen değil,
-                            geliştiren bir yapay zeka platformu olarak doğdu. Amacımız tek:
+                            SafeVox, çağrı merkezi temsilcilerini geliştiren ve destekleyen
+                            bir yapay zeka platformu olarak doğdu. Amacımız tek:
                             teknolojiyi insanın lehine çalıştırmak.
                         </p>
                     </motion.div>
@@ -172,12 +172,60 @@ export default function AboutPage() {
                         transition={{ duration: 0.8 }}
                         className="relative"
                     >
-                        <div className="aspect-square rounded-full bg-gradient-to-tr from-safe-600 to-vox-600 opacity-15 absolute inset-0 blur-3xl" />
-                        <img
-                            src="/support-team.png"
-                            alt="SafeVox Ekibi"
-                            className="relative rounded-3xl shadow-2xl border border-white/10 w-full object-cover h-[480px]"
-                        />
+                        <div className="absolute inset-0 bg-gradient-to-br from-safe-600/15 to-vox-600/15 rounded-3xl blur-3xl" />
+                        <div className="relative bg-dark-800/80 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl space-y-5">
+                            {/* Header */}
+                            <div className="flex items-center justify-between mb-2">
+                                <div>
+                                    <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold">SafeVox Etkisi</p>
+                                    <h3 className="text-white font-bold text-lg">Gerçek Zamanlı Özet</h3>
+                                </div>
+                                <div className="flex items-center gap-1.5 px-3 py-1 bg-green-500/10 border border-green-500/20 rounded-full">
+                                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
+                                    <span className="text-green-400 text-xs font-bold">Canlı</span>
+                                </div>
+                            </div>
+
+                            {/* Stats row */}
+                            <div className="grid grid-cols-2 gap-4">
+                                {[
+                                    { label: 'Çağrı Kapsama', value: '%100', color: 'text-safe-400' },
+                                    { label: 'Müşteri Memnuniyeti', value: '%20', color: 'text-vox-400' },
+                                    { label: 'Turnover Azalışı', value: '%25', color: 'text-purple-400' },
+                                    { label: 'Veri İhlali', value: '0', color: 'text-green-400' },
+                                ].map((s, i) => (
+                                    <div key={i} className="bg-white/3 border border-white/6 rounded-2xl p-4">
+                                        <p className={`text-2xl font-bold ${s.color}`}>{s.value}</p>
+                                        <p className="text-xs text-gray-500 mt-1">{s.label}</p>
+                                    </div>
+                                ))}
+                            </div>
+
+                            {/* Progress bars */}
+                            <div className="space-y-3">
+                                {[
+                                    { label: 'Duygu Analizi Doğruluğu', pct: '92%', color: 'bg-gradient-to-r from-safe-500 to-vox-500' },
+                                    { label: 'KVKK Uyum Skoru', pct: '100%', color: 'bg-green-500' },
+                                    { label: 'Temsilci Gelişim Oranı', pct: '78%', color: 'bg-purple-500' },
+                                ].map((b, i) => (
+                                    <div key={i}>
+                                        <div className="flex justify-between text-xs mb-1.5">
+                                            <span className="text-gray-400">{b.label}</span>
+                                            <span className="text-white font-bold">{b.pct}</span>
+                                        </div>
+                                        <div className="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                                            <div className={`h-full ${b.color} rounded-full`} style={{ width: b.pct }} />
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            {/* Footer tag */}
+                            <div className="flex items-center gap-2 pt-2 border-t border-white/6">
+                                <Shield className="w-4 h-4 text-safe-400" />
+                                <p className="text-xs text-gray-500">KVKK tam uyumlu · Türkiye'de geliştiriliyor</p>
+                            </div>
+                        </div>
                     </motion.div>
                 </div>
             </section>

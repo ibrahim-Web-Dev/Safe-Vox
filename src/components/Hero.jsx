@@ -20,7 +20,7 @@ export default function Hero() {
     const [isVideoOpen, setIsVideoOpen] = useState(false);
 
     return (
-        <section className="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden">
+        <section className="relative min-h-screen flex items-center justify-center pt-24 sm:pt-28 pb-20 overflow-hidden">
             {/* Dot grid */}
             <div className="absolute inset-0 dot-grid opacity-50 pointer-events-none" />
 
@@ -31,7 +31,7 @@ export default function Hero() {
                 <div className="absolute -bottom-20 left-1/3 w-[400px] h-[400px] bg-purple-600/8 rounded-full blur-[100px] animate-blob" style={{ animationDelay: '4s' }} />
             </div>
 
-            <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center w-full">
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full">
                 {/* Left — Text */}
                 <motion.div
                     initial={{ opacity: 0, y: 32 }}
@@ -53,14 +53,14 @@ export default function Hero() {
                     </motion.div>
 
                     {/* Headline */}
-                    <h1 className="text-5xl lg:text-[4.5rem] font-display font-bold leading-[1.05] mb-6">
+                    <h1 className="text-4xl sm:text-5xl lg:text-[4.5rem] font-display font-bold leading-[1.05] mb-6">
                         <span className="block text-white">Geleneksel</span>
                         <span className="block text-white">Denetimi Yıkan</span>
                         <span className="block shimmer-text">Dijital Koç</span>
                     </h1>
 
                     <p className="text-lg text-gray-400 mb-10 max-w-lg leading-relaxed">
-                        Müşteri temsilcilerinizi denetleyen değil,{' '}
+                        Müşteri temsilcilerinizi{' '}
                         <span className="text-white font-medium">geliştiren</span> yapay zeka.
                         Duygu analizi, stres yönetimi ve otonom eğitim modülleriyle
                         operasyonel verimliliği zirveye çıkarın.
@@ -107,7 +107,7 @@ export default function Hero() {
                     initial={{ opacity: 0, x: 32 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.25, ease: 'easeOut' }}
-                    className="relative hidden lg:block"
+                    className="relative w-full max-w-sm mx-auto lg:max-w-none"
                 >
                     {/* Main card */}
                     <div className="relative z-10 bg-dark-800/70 backdrop-blur-2xl border border-white/10 rounded-3xl p-6 shadow-2xl shadow-black/40">
@@ -170,6 +170,20 @@ export default function Hero() {
                                     />
                                 </div>
                             </div>
+                            <div className="p-3.5 bg-white/3 rounded-2xl border border-white/6">
+                                <div className="flex justify-between items-center mb-2">
+                                    <span className="text-xs text-gray-400">Yorgunluk Seviyesi</span>
+                                    <span className="text-xs text-orange-400 font-bold">Yüksek !</span>
+                                </div>
+                                <div className="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                                    <motion.div
+                                        initial={{ width: 0 }}
+                                        animate={{ width: '78%' }}
+                                        transition={{ delay: 1.4, duration: 1.2, ease: 'easeOut' }}
+                                        className="h-full bg-orange-400 rounded-full"
+                                    />
+                                </div>
+                            </div>
                         </div>
 
                         {/* AI suggestion */}
@@ -178,7 +192,7 @@ export default function Hero() {
                             <div>
                                 <h4 className="text-white font-bold text-xs mb-1">AI Koçluk Önerisi</h4>
                                 <p className="text-gray-400 text-xs leading-relaxed">
-                                    Harika performans! Çapraz satış fırsatı için "ek hizmet" önerisi yapabilirsiniz.
+                                    Temsilci gereğinden fazla yorulmuş görünüyor. Kısa bir kahve molası performansı artırabilir.
                                 </p>
                             </div>
                         </div>
@@ -188,7 +202,7 @@ export default function Hero() {
                     <motion.div
                         animate={{ y: [0, -8, 0] }}
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                        className="absolute -right-10 top-6 z-20 p-3 bg-dark-900/92 backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl"
+                        className="absolute -right-4 lg:-right-10 top-6 z-20 w-44 p-3 bg-dark-900/92 backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl hidden sm:block"
                     >
                         <div className="flex items-center gap-2.5">
                             <div className="w-8 h-8 rounded-lg bg-green-500/15 flex items-center justify-center border border-green-500/20">
@@ -205,7 +219,7 @@ export default function Hero() {
                     <motion.div
                         animate={{ y: [0, 9, 0] }}
                         transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-                        className="absolute -left-10 bottom-20 z-20 p-3 bg-dark-900/92 backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl"
+                        className="absolute -right-4 lg:-right-10 top-20 z-20 w-44 p-3 bg-dark-900/92 backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl hidden sm:block"
                     >
                         <div className="flex items-center gap-2.5">
                             <div className="w-8 h-8 rounded-lg bg-vox-500/15 flex items-center justify-center border border-vox-500/20">

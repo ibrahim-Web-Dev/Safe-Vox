@@ -3,7 +3,7 @@ import { motion, useInView } from 'framer-motion';
 
 const stats = [
     { value: 100, suffix: '%', label: 'Çağrı Analizi',    desc: 'Örneklem hatası olmadan tam kapsam.' },
-    { value: 40,  suffix: '%', label: 'Maliyet Tasarrufu', desc: 'Hatalı bilgi kaynaklı kayıplarda azalma.' },
+    { value: 20,  suffix: '%', label: 'Müşteri Memnuniyeti', desc: 'Duygu analizi destekli çağrılarda memnuniyet artışı.' },
     { value: 25,  suffix: '%', label: 'Turnover Azalışı',  desc: 'Çalışan bağlılığı ile düşen sirkülasyon.' },
     { value: 0,   suffix: '',  label: 'Veri İhlali',        desc: 'KVKK tam uyumlu maskeleme teknolojisi.' },
 ];
@@ -110,7 +110,7 @@ export default function Impact() {
                             <p className="text-xs font-bold tracking-widest uppercase text-gray-500 mb-2">Kurumsal Kazanımlar</p>
                             <h3 className="text-2xl font-bold text-white mb-8">
                                 SafeVox sadece bir yazılım değil,{' '}
-                                <span className="text-safe-400">stratejik bir ortak</span>
+                                <span className="text-safe-400">stratejik bir ortaktır</span>
                             </h3>
                             <ul className="space-y-4">
                                 {gains.map((item, i) => (

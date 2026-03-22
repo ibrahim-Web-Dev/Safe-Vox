@@ -3,30 +3,30 @@ import { Mic2, BrainCircuit, GraduationCap } from 'lucide-react';
 
 const steps = [
     {
-        step: '01',
+        step: '1',
         icon: Mic2,
-        title: 'Çağrıyı Yakala',
+        title: 'Çağrı Yakalama',
         description:
             'Gerçek zamanlı ses akışı güvenli altyapıya aktarılır. KVKK uyumlu maskeleme anında devreye girerek hassas veriler korunur.',
         details: ['Gerçek zamanlı ses akışı', 'Otomatik KVKK maskeleme', 'Güvenli şifreli depolama'],
         accent: 'safe',
     },
     {
-        step: '02',
+        step: '2',
         icon: BrainCircuit,
-        title: 'AI Analiz Et',
+        title: 'AI ile Analiz',
         description:
             'Hibrit yapay zeka modeli ses tonunu, frekans değişimlerini ve kelime seçimini milisaniyeler içinde analiz eder.',
         details: ['Akustik frekans analizi', 'Semantik anlam çıkarımı', 'Duygu & stres tespiti'],
         accent: 'vox',
     },
     {
-        step: '03',
+        step: '3',
         icon: GraduationCap,
-        title: 'Koçluk Ver',
+        title: 'Koçluk Verme',
         description:
             'Kişiye özel eğitim ataması ve anlık AI önerileriyle her temsilcinin gelişimi otomatik olarak yönetilir.',
-        details: ['Anlık koçluk önerileri', 'Turkcell eğitim ataması', 'Objektif performans raporu'],
+        details: ['Anlık koçluk önerileri', 'Kişisel kurs ataması', 'Objektif performans raporu'],
         accent: 'purple',
     },
 ];
@@ -92,8 +92,8 @@ export default function HowItWorks() {
                         transition={{ delay: 0.18 }}
                         className="text-lg text-gray-400 max-w-2xl mx-auto"
                     >
-                        SafeVox'un akıllı pipeline'ı her çağrıyı otomatik olarak analiz eder,
-                        geliştirme fırsatlarını tespit eder ve harekete geçer.
+                        SafeVox her çağrıyı uçtan uca otomatik olarak analiz eder,
+                        gelişim fırsatlarını tespit eder ve anında harekete geçer.
                     </motion.p>
                 </div>
 
@@ -115,7 +115,7 @@ export default function HowItWorks() {
                                 className="relative z-10 bg-dark-800/60 backdrop-blur-sm border border-white/8 rounded-3xl p-8 hover:border-white/14 transition-all duration-300 hover:-translate-y-1 group"
                             >
                                 {/* Step number (watermark) */}
-                                <span className="absolute top-5 right-6 text-5xl font-bold text-white/4 font-display select-none">
+                                <span className="absolute top-5 right-6 text-5xl font-bold text-white/30 font-display select-none">
                                     {step.step}
                                 </span>
 
