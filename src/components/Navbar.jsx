@@ -35,8 +35,8 @@ export default function Navbar() {
                 className={cn(
                     'w-full max-w-6xl rounded-2xl transition-all duration-400',
                     scrolled
-                        ? 'bg-dark-900/90 backdrop-blur-2xl border border-white/10 shadow-2xl shadow-black/60 py-3 px-5'
-                        : 'bg-white/4 backdrop-blur-lg border border-white/8 py-3 px-5'
+                        ? 'bg-dark-900 border border-white/10 shadow-xl shadow-black/40 py-3 px-5'
+                        : 'bg-dark-900/80 border border-white/8 py-3 px-5'
                 )}
             >
                 <div className="flex items-center justify-between">
@@ -47,7 +47,7 @@ export default function Navbar() {
                             <Activity className="w-4 h-4 text-white/40 absolute animate-pulse" />
                         </div>
                         <span className="text-xl font-display font-bold tracking-tight text-white">
-                            Safe<span className="bg-clip-text text-transparent bg-gradient-to-r from-safe-400 to-vox-400">Vox</span>
+                            Safe<span className="text-safe-400">Vox</span>
                         </span>
                     </Link>
 
@@ -73,7 +73,7 @@ export default function Navbar() {
                     <div className="hidden md:block">
                         <Link
                             to="/iletisim"
-                            className="px-5 py-2.5 bg-gradient-to-r from-safe-600 to-vox-600 text-white text-sm font-bold rounded-xl hover:opacity-90 transition-all shadow-lg shadow-safe-500/20 hover:shadow-safe-500/35 hover:-translate-y-0.5"
+                            className="px-5 py-2.5 bg-white text-dark-900 text-sm font-bold rounded-xl hover:bg-white/90 transition-all shadow-lg shadow-white/10 hover:-translate-y-0.5"
                         >
                             Demo Talebi
                         </Link>
@@ -115,7 +115,7 @@ export default function Navbar() {
                                 ))}
                                 <Link
                                     to="/iletisim"
-                                    className="w-full py-3 bg-gradient-to-r from-safe-600 to-vox-600 text-white font-bold rounded-xl mt-2 text-center text-sm"
+                                    className="w-full py-3 bg-white text-dark-900 font-bold rounded-xl mt-2 text-center text-sm"
                                 >
                                     Demo Talebi
                                 </Link>

@@ -24,11 +24,10 @@ export default function Hero() {
             {/* Dot grid */}
             <div className="absolute inset-0 dot-grid opacity-50 pointer-events-none" />
 
-            {/* Gradient blobs */}
+            {/* Subtle static gradient */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-1/4 -left-32 w-[560px] h-[560px] bg-safe-600/12 rounded-full blur-[130px] animate-blob" />
-                <div className="absolute top-1/3 -right-20 w-[480px] h-[480px] bg-vox-600/12 rounded-full blur-[120px] animate-blob" style={{ animationDelay: '2s' }} />
-                <div className="absolute -bottom-20 left-1/3 w-[400px] h-[400px] bg-purple-600/8 rounded-full blur-[100px] animate-blob" style={{ animationDelay: '4s' }} />
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/6 to-transparent" />
             </div>
 
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full">
@@ -113,7 +112,7 @@ export default function Hero() {
                     className="relative w-full max-w-sm mx-auto lg:max-w-none"
                 >
                     {/* Main card */}
-                    <div className="relative z-10 bg-dark-800/70 backdrop-blur-2xl border border-white/10 rounded-3xl p-6 shadow-2xl shadow-black/40">
+                    <div className="relative z-10 bg-dark-800 border border-white/10 rounded-2xl p-6 shadow-xl">
                         {/* Header */}
                         <div className="flex items-center justify-between mb-5 pb-5 border-b border-white/6">
                             <div className="flex items-center gap-3">
@@ -205,7 +204,7 @@ export default function Hero() {
                     <motion.div
                         animate={{ y: [0, -8, 0] }}
                         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                        className="absolute -right-4 lg:-right-10 top-6 z-20 w-44 p-3 bg-dark-900/92 backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl hidden sm:block"
+                        className="absolute -right-4 lg:-right-10 top-6 z-20 w-44 p-3 bg-dark-800 border border-white/10 rounded-xl shadow-lg hidden sm:block"
                     >
                         <div className="flex items-center gap-2.5">
                             <div className="w-8 h-8 rounded-lg bg-green-500/15 flex items-center justify-center border border-green-500/20">
@@ -222,7 +221,7 @@ export default function Hero() {
                     <motion.div
                         animate={{ y: [0, 9, 0] }}
                         transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-                        className="absolute -right-4 lg:-right-10 top-20 z-20 w-44 p-3 bg-dark-900/92 backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl hidden sm:block"
+                        className="absolute -right-4 lg:-right-10 top-20 z-20 w-44 p-3 bg-dark-800 border border-white/10 rounded-xl shadow-lg hidden sm:block"
                     >
                         <div className="flex items-center gap-2.5">
                             <div className="w-8 h-8 rounded-lg bg-vox-500/15 flex items-center justify-center border border-vox-500/20">
@@ -235,8 +234,6 @@ export default function Hero() {
                         </div>
                     </motion.div>
 
-                    {/* Glow */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-safe-600/10 to-vox-600/10 rounded-3xl blur-3xl -z-10 scale-110" />
                 </motion.div>
             </div>
 

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, CheckCircle, MessageSquare } from 'lucide-react';
+import { FloatingPaths } from '../components/BackgroundPaths';
+import DemoRequestSection from '../components/DemoRequestSection';
 
 const contactInfo = [
     {
@@ -50,12 +52,15 @@ export default function ContactPage() {
     };
 
     return (
+        <>
         <div className="pt-24 bg-dark-900 min-h-screen">
             {/* Hero Banner */}
             <section className="relative py-20 overflow-hidden">
                 <div className="absolute inset-0 pointer-events-none">
-                    <div className="absolute top-1/2 left-1/4 w-80 h-80 bg-safe-600/15 rounded-full blur-[120px]" />
-                    <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-vox-600/15 rounded-full blur-[120px]" />
+                    <FloatingPaths position={1} />
+                    <FloatingPaths position={-1} />
+                    <div className="absolute top-1/2 left-1/4 w-80 h-80 bg-safe-600/10 rounded-full blur-[120px]" />
+                    <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-vox-600/10 rounded-full blur-[120px]" />
                 </div>
                 <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
                     <motion.div
@@ -286,5 +291,9 @@ export default function ContactPage() {
                 </div>
             </section>
         </div>
+
+        {/* Demo Request Section */}
+        <DemoRequestSection />
+        </>
     );
 }

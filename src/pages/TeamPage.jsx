@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Linkedin, Mail, ArrowRight, Users } from 'lucide-react';
+import { FloatingPaths } from '../components/BackgroundPaths';
 
 const team = [
     {
@@ -97,8 +98,10 @@ export default function TeamPage() {
             {/* Hero Banner */}
             <section className="relative py-24 overflow-hidden">
                 <div className="absolute inset-0 pointer-events-none">
-                    <div className="absolute top-1/2 left-1/3 w-80 h-80 bg-safe-600/15 rounded-full blur-[120px]" />
-                    <div className="absolute top-1/3 right-1/3 w-80 h-80 bg-vox-600/15 rounded-full blur-[120px]" />
+                    <FloatingPaths position={1} />
+                    <FloatingPaths position={-1} />
+                    <div className="absolute top-1/2 left-1/3 w-80 h-80 bg-safe-600/10 rounded-full blur-[120px]" />
+                    <div className="absolute top-1/3 right-1/3 w-80 h-80 bg-vox-600/10 rounded-full blur-[120px]" />
                 </div>
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
                     <motion.div
@@ -113,7 +116,7 @@ export default function TeamPage() {
                         </div>
                         <h1 className="text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
                             Teknolojiyi{' '}
-                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-safe-400 to-vox-400">
+                            <span className="text-safe-300">
                                 İnsanla Buluşturan
                             </span>{' '}
                             Ekip
@@ -152,7 +155,7 @@ export default function TeamPage() {
                         </p>
                         <Link
                             to="/iletisim"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-safe-600 to-vox-600 rounded-xl font-bold text-white hover:opacity-90 transition-all shadow-lg shadow-safe-500/25 group"
+                            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-dark-900 rounded-xl font-bold hover:bg-white/90 transition-all shadow-lg shadow-white/10 group"
                         >
                             İletişime Geç
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

@@ -112,7 +112,7 @@ export default function HowItWorks() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.14 }}
-                                className="relative z-10 bg-dark-800/60 backdrop-blur-sm border border-white/8 rounded-3xl p-8 hover:border-white/14 transition-all duration-300 hover:-translate-y-1 group"
+                                className="relative z-10 bg-dark-800 border border-white/8 rounded-2xl p-8 hover:border-white/16 transition-all duration-300 hover:-translate-y-1 group"
                             >
                                 {/* Step number (watermark) */}
                                 <span className="absolute top-5 right-6 text-5xl font-bold text-white/30 font-display select-none">
