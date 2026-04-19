@@ -2,7 +2,7 @@ import { UserCheck, Heart, Zap } from 'lucide-react';
 
 export default function About() {
     return (
-        <section className="py-24 bg-dark-800 relative overflow-hidden">
+        <section className="py-24 pb-20 md:pb-24 bg-dark-800 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-safe-900/20 to-transparent pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
@@ -42,10 +42,10 @@ export default function About() {
                     <img
                         src="/support-team.jpeg"
                         alt="AI Powered Customer Support Team"
-                        className="relative rounded-3xl shadow-2xl border border-white/10 w-full object-cover h-[500px]"
+                        className="relative rounded-3xl shadow-2xl border border-white/10 w-full object-cover h-[300px] md:h-[500px]"
                     />
 
-                    <div className="absolute -bottom-8 -left-8 bg-dark-900 p-6 rounded-2xl border border-white/10 shadow-xl max-w-xs">
+                    <div className="absolute -bottom-4 left-4 md:-bottom-8 md:-left-8 bg-dark-900 p-4 md:p-6 rounded-2xl border border-white/10 shadow-xl max-w-[220px] md:max-w-xs">
                         <div className="flex items-center gap-4 mb-4">
                             <div className="w-12 h-12 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center">
                                 <span className="font-bold text-lg">98%</span>

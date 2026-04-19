@@ -186,15 +186,54 @@ export default function RadialOrbitalTimeline() {
                 </span>
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-display">
                     5 Adımda{' '}
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-safe-400 to-vox-400">
-                        Akıllı Koçluk
-                    </span>
+                    <span className="text-safe-300">Akıllı Koçluk</span>
                 </h2>
-                <p className="text-gray-400 max-w-xl mx-auto">Bir düğüme tıklayarak ayrıntıları keşfedin</p>
+                <p className="text-gray-400 max-w-xl mx-auto hidden md:block">Bir düğüme tıklayarak ayrıntıları keşfedin</p>
             </div>
 
+            {/* Mobile: vertical step list */}
+            <div className="md:hidden px-6 space-y-4 pb-4">
+                {timelineData.map((item) => {
+                    const Icon = item.icon;
+                    const isExpanded = expandedItems[item.id];
+                    return (
+                        <div
+                            key={item.id}
+                            className="bg-black/60 border border-white/10 rounded-2xl overflow-hidden cursor-pointer"
+                            onClick={() => toggleItem(item.id)}
+                        >
+                            <div className="flex items-center gap-4 p-4">
+                                <div className={`w-10 h-10 rounded-full flex items-center justify-center border-2 shrink-0 transition-colors ${isExpanded ? 'bg-white text-black border-white' : 'bg-black text-white border-white/40'}`}>
+                                    <Icon size={16} />
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                    <p className="text-xs text-gray-500 font-mono">{item.date}</p>
+                                    <p className="text-white font-semibold text-sm">{item.title}</p>
+                                </div>
+                                <Badge className={getStatusStyles(item.status)}>{getStatusLabel(item.status)}</Badge>
+                            </div>
+                            {isExpanded && (
+                                <div className="px-4 pb-4 border-t border-white/8 pt-3">
+                                    <p className="text-sm text-white/80 leading-relaxed">{item.content}</p>
+                                    <div className="mt-3">
+                                        <div className="flex justify-between text-xs mb-1 text-gray-400">
+                                            <span>İlerleme</span>
+                                            <span>{item.energy}%</span>
+                                        </div>
+                                        <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden">
+                                            <div className="h-full bg-safe-500 rounded-full" style={{ width: `${item.energy}%` }} />
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    );
+                })}
+            </div>
+
+            {/* Desktop: radial orbital */}
             <div
-                className="w-full h-[600px] flex flex-col items-center justify-center bg-transparent overflow-hidden"
+                className="hidden md:flex w-full h-[600px] flex-col items-center justify-center bg-transparent overflow-hidden"
                 ref={containerRef}
                 onClick={handleContainerClick}
             >

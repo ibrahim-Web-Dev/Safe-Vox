@@ -140,9 +140,7 @@ export default function ContainerScrollSection() {
                         <h2 className="text-4xl md:text-6xl font-bold text-white font-display">
                             Tüm Kontrolü
                             <br />
-                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-safe-400 to-vox-400">
-                                Elinizde Tutun
-                            </span>
+                            <span className="text-safe-300">Elinizde Tutun</span>
                         </h2>
                         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
                             Gerçek zamanlı ses analizi, AI koçluk önerileri ve performans raporları tek ekranda.

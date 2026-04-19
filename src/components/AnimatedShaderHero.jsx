@@ -223,10 +223,10 @@ export default function AnimatedShaderHero({
 
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-white">
         {trustBadge && (
-          <div className="mb-8 animate-fade-in-down">
-            <div className="flex items-center gap-2 px-6 py-3 bg-safe-500/10 backdrop-blur-md border border-safe-300/30 rounded-full text-sm">
+          <div className="mb-8 animate-fade-in-down px-4">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-safe-500/10 backdrop-blur-md border border-safe-300/30 rounded-full text-xs md:text-sm text-center">
               {trustBadge.icons && (
-                <div className="flex">
+                <div className="flex shrink-0">
                   {trustBadge.icons.map((icon, i) => (
                     <span key={i} className="text-safe-300">{icon}</span>
                   ))}
@@ -239,10 +239,10 @@ export default function AnimatedShaderHero({
 
         <div className="text-center space-y-6 max-w-5xl mx-auto px-4">
           <div className="space-y-2">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white animate-fade-in-up animation-delay-200 font-display">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white animate-fade-in-up animation-delay-200 font-display">
               {headline.line1}
             </h1>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white/85 animate-fade-in-up animation-delay-400 font-display">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white/85 animate-fade-in-up animation-delay-400 font-display">
               {headline.line2}
             </h1>
           </div>
