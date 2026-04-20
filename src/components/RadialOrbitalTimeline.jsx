@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { ArrowRight, Mic2, BrainCircuit, Activity, GraduationCap, BarChart2, Zap } from 'lucide-react';
+import { ArrowRight, Mic2, BrainCircuit, Activity, GraduationCap, BarChart2 } from 'lucide-react';
 
 const timelineData = [
     {
@@ -215,15 +215,6 @@ export default function RadialOrbitalTimeline() {
                             {isExpanded && (
                                 <div className="px-4 pb-4 border-t border-white/8 pt-3">
                                     <p className="text-sm text-white/80 leading-relaxed">{item.content}</p>
-                                    <div className="mt-3">
-                                        <div className="flex justify-between text-xs mb-1 text-gray-400">
-                                            <span>İlerleme</span>
-                                            <span>{item.energy}%</span>
-                                        </div>
-                                        <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden">
-                                            <div className="h-full bg-safe-500 rounded-full" style={{ width: `${item.energy}%` }} />
-                                        </div>
-                                    </div>
                                 </div>
                             )}
                         </div>
@@ -312,21 +303,6 @@ export default function RadialOrbitalTimeline() {
                                                 </div>
                                                 <h4 className="text-sm font-semibold mb-2">{item.title}</h4>
                                                 <p className="text-xs text-white/80">{item.content}</p>
-
-                                                <div className="mt-3 pt-3 border-t border-white/10">
-                                                    <div className="flex justify-between text-xs mb-1">
-                                                        <span className="flex items-center gap-1">
-                                                            <Zap size={10} /> İlerleme
-                                                        </span>
-                                                        <span className="font-mono">{item.energy}%</span>
-                                                    </div>
-                                                    <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden">
-                                                        <div
-                                                            className="h-full bg-gradient-to-r from-safe-500 to-vox-500"
-                                                            style={{ width: `${item.energy}%` }}
-                                                        />
-                                                    </div>
-                                                </div>
 
                                                 {item.relatedIds.length > 0 && (
                                                     <div className="mt-3 pt-3 border-t border-white/10">
