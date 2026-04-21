@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Mic, Activity } from 'lucide-react';
+import { Menu, X, Mic } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 export default function Navbar() {
@@ -42,12 +42,11 @@ export default function Navbar() {
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-2.5 group">
-                        <div className="relative flex items-center justify-center w-9 h-9 bg-gradient-to-br from-safe-500 to-vox-600 rounded-xl shadow-lg shadow-safe-500/20 group-hover:shadow-safe-500/40 transition-all duration-300">
-                            <Mic className="w-4 h-4 text-white absolute" />
-                            <Activity className="w-4 h-4 text-white/40 absolute animate-pulse" />
+                        <div className="relative flex items-center justify-center w-9 h-9 bg-white/8 border border-white/15 rounded-xl transition-all duration-300 group-hover:bg-white/12">
+                            <Mic className="w-4 h-4 text-white" />
                         </div>
                         <span className="text-xl font-display font-bold tracking-tight text-white">
-                            Safe<span className="text-safe-400">Vox</span>
+                            SafeVox
                         </span>
                     </Link>
 

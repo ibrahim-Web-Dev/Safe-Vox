@@ -11,8 +11,8 @@ export default function About() {
                         <UserCheck className="w-4 h-4" />
                         İnsan Odaklı Vizyon
                     </div>
-                    <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                        Yapay Zeka Bir İkame Değil, <span className="text-safe-400">Güçlü Bir Müttefiktir</span>.
+                    <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
+                        Yapay Zeka Bir İkame Değil, Güçlü Bir Müttefiktir.
                     </h2>
                     <p className="text-gray-400 text-lg leading-relaxed mb-6">
                         SafeVox, temsilcileri sürekli izleyen bir "gözetmen" değil; onların

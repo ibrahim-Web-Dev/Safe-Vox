@@ -24,8 +24,7 @@ export default function CompetitiveEdge() {
                         Rekabet Analizi
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold text-white">
-                        Neden{' '}
-                        <span className="text-safe-300">SafeVox?</span>
+                        Neden SafeVox?
                     </h2>
                     <p className="text-gray-400 mt-4 max-w-xl mx-auto">
                         Rakipler skoru ölçüyor, biz insanı analiz ediyoruz — %100 yerli ve KVKK uyumlu.
@@ -39,7 +38,7 @@ export default function CompetitiveEdge() {
                                 <th className="text-left py-4 px-5 text-gray-500 font-medium w-1/4">Özellik</th>
                                 <th className="py-4 px-5 text-gray-500 font-medium text-center">Geleneksel Denetim</th>
                                 <th className="py-4 px-5 text-gray-500 font-medium text-center">Verint / NICE</th>
-                                <th className="py-4 px-5 font-bold text-center text-safe-300">
+                                <th className="py-4 px-5 font-bold text-center text-white">
                                     SafeVox
                                 </th>
                             </tr>

@@ -202,7 +202,7 @@ const useShaderBackground = () => {
 };
 
 export default function AnimatedShaderHero({
-  trustBadge = { text: 'Yapay Zeka Destekli Performans Yönetimi', icons: ['✨'] },
+  trustBadge = null,
   headline = { line1: 'Geleneksel Denetimi Yıkan', line2: 'Dijital Koç' },
   subtitle = 'Müşteri temsilcilerinizi geliştiren yapay zeka. Duygu analizi, stres yönetimi ve otonom eğitim modülleriyle operasyonel verimliliği zirveye çıkarın.',
   buttons = {

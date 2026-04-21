@@ -22,11 +22,7 @@ export default function CTASection() {
                     </span>
 
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                        Çağrı Merkezinizi
-                        <br />
-                        <span className="text-safe-300">
-                            Dönüştürmeye Hazır mısınız?
-                        </span>
+                        Çağrı Merkezinizi Dönüştürmeye Hazır mısınız?
                     </h2>
 
                     <p className="text-lg text-gray-400 mb-10 max-w-xl mx-auto">

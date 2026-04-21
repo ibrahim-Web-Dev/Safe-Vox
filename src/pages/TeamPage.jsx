@@ -110,16 +110,12 @@ export default function TeamPage() {
                         transition={{ duration: 0.7 }}
                         className="text-center max-w-3xl mx-auto"
                     >
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-vox-500/10 border border-vox-500/20 text-vox-400 text-sm font-medium mb-6">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-400 text-sm font-medium mb-6">
                             <Users className="w-4 h-4" />
                             Ekibimiz
                         </div>
-                        <h1 className="text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
-                            Teknolojiyi{' '}
-                            <span className="text-safe-300">
-                                İnsanla Buluşturan
-                            </span>{' '}
-                            Ekip
+                        <h1 className="text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight text-white">
+                            Teknolojiyi İnsanla Buluşturan Ekip
                         </h1>
                         <p className="text-xl text-gray-400 leading-relaxed">
                             Mühendislik, iletişim ve dilbilim disiplinlerini bir araya getiren

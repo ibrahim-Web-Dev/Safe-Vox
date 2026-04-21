@@ -68,16 +68,12 @@ export default function AboutPage() {
                         transition={{ duration: 0.7 }}
                         className="text-center max-w-3xl mx-auto"
                     >
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-safe-500/10 border border-safe-500/20 text-safe-400 text-sm font-medium mb-6">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-400 text-sm font-medium mb-6">
                             <UserCheck className="w-4 h-4" />
                             Hakkımızda
                         </div>
-                        <h1 className="text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
-                            Yapay Zekayı{' '}
-                            <span className="text-safe-300">
-                                İnsanın Yanına
-                            </span>{' '}
-                            Koyduk
+                        <h1 className="text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight text-white">
+                            Yapay Zekayı İnsanın Yanına Koyduk
                         </h1>
                         <p className="text-xl text-gray-400 leading-relaxed">
                             SafeVox, çağrı merkezi temsilcilerini geliştiren ve destekleyen
@@ -140,9 +136,8 @@ export default function AboutPage() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                            Geleneksel Denetimi Kıran{' '}
-                            <span className="text-safe-400">Bir Fikrin Hikayesi</span>
+                        <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight text-white">
+                            Geleneksel Denetimi Kıran Bir Fikrin Hikayesi
                         </h2>
                         <p className="text-gray-400 text-lg leading-relaxed mb-6">
                             Çağrı merkezlerinde yaşanan en büyük sorunlardan biri, kalite denetiminin hâlâ
@@ -176,7 +171,7 @@ export default function AboutPage() {
                         transition={{ duration: 0.8 }}
                         className="relative"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-br from-safe-600/15 to-vox-600/15 rounded-3xl blur-3xl" />
+                        <div className="absolute inset-0 bg-white/3 rounded-3xl" />
                         <div className="relative bg-dark-800/80 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl space-y-5">
                             {/* Header */}
                             <div className="flex items-center justify-between mb-2">
@@ -193,13 +188,13 @@ export default function AboutPage() {
                             {/* Stats row */}
                             <div className="grid grid-cols-2 gap-4">
                                 {[
-                                    { label: 'Çağrı Kapsama', value: '%100', color: 'text-safe-400' },
-                                    { label: 'Müşteri Memnuniyeti', value: '%20', color: 'text-vox-400' },
-                                    { label: 'Turnover Azalışı', value: '%25', color: 'text-purple-400' },
-                                    { label: 'Veri İhlali', value: '0', color: 'text-green-400' },
+                                    { label: 'Çağrı Kapsama', value: '%100' },
+                                    { label: 'Müşteri Memnuniyeti', value: '%20' },
+                                    { label: 'Turnover Azalışı', value: '%25' },
+                                    { label: 'Veri İhlali', value: '0' },
                                 ].map((s, i) => (
                                     <div key={i} className="bg-white/3 border border-white/6 rounded-2xl p-4">
-                                        <p className={`text-2xl font-bold ${s.color}`}>{s.value}</p>
+                                        <p className="text-2xl font-bold text-white">{s.value}</p>
                                         <p className="text-xs text-gray-500 mt-1">{s.label}</p>
                                     </div>
                                 ))}
@@ -208,9 +203,9 @@ export default function AboutPage() {
                             {/* Progress bars */}
                             <div className="space-y-3">
                                 {[
-                                    { label: 'Duygu Analizi Doğruluğu', pct: '92%', color: 'bg-gradient-to-r from-safe-500 to-vox-500' },
-                                    { label: 'KVKK Uyum Skoru', pct: '100%', color: 'bg-green-500' },
-                                    { label: 'Temsilci Gelişim Oranı', pct: '78%', color: 'bg-purple-500' },
+                                    { label: 'Duygu Analizi Doğruluğu', pct: '92%', color: 'bg-white/60' },
+                                    { label: 'KVKK Uyum Skoru', pct: '100%', color: 'bg-white/80' },
+                                    { label: 'Temsilci Gelişim Oranı', pct: '78%', color: 'bg-white/50' },
                                 ].map((b, i) => (
                                     <div key={i}>
                                         <div className="flex justify-between text-xs mb-1.5">
@@ -226,7 +221,7 @@ export default function AboutPage() {
 
                             {/* Footer tag */}
                             <div className="flex items-center gap-2 pt-2 border-t border-white/6">
-                                <Shield className="w-4 h-4 text-safe-400" />
+                                <Shield className="w-4 h-4 text-gray-400" />
                                 <p className="text-xs text-gray-500">KVKK tam uyumlu · Türkiye'de geliştiriliyor</p>
                             </div>
                         </div>
@@ -283,7 +278,7 @@ export default function AboutPage() {
                         <p className="text-gray-400 text-lg">Fikrin doğuşundan bugüne SafeVox'un hikayesi.</p>
                     </motion.div>
                     <div className="relative">
-                        <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-safe-500/50 via-vox-500/30 to-transparent" />
+                        <div className="absolute left-8 top-0 bottom-0 w-px bg-white/10" />
                         <div className="space-y-10">
                             {milestones.map((m, i) => (
                                 <motion.div
@@ -295,7 +290,7 @@ export default function AboutPage() {
                                     className="flex gap-8"
                                 >
                                     <div className="relative shrink-0">
-                                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-safe-600 to-vox-600 flex items-center justify-center shadow-lg shadow-safe-500/20">
+                                        <div className="w-16 h-16 rounded-2xl bg-white/8 border border-white/15 flex items-center justify-center">
                                             <span className="text-xs font-bold text-white">{m.year}</span>
                                         </div>
                                     </div>

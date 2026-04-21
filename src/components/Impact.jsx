@@ -24,8 +24,7 @@ export default function Impact() {
                         Rakamlarla SafeVox
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold text-white mt-4">
-                        Ölçülebilir{' '}
-                        <span className="text-safe-300">SafeVox Etkisi</span>
+                        Ölçülebilir SafeVox Etkisi
                     </h2>
                 </div>
 
@@ -36,7 +35,7 @@ export default function Impact() {
                                 key={i}
                                 className="bg-dark-800/60 border border-white/8 rounded-3xl p-7 hover:border-white/14 transition-colors"
                             >
-                                <div className="text-5xl font-bold mb-2 text-safe-300">{stat.value}</div>
+                                <div className="text-5xl font-bold mb-2 text-white">{stat.value}</div>
                                 <div className="text-sm font-bold text-gray-300 mb-1">{stat.label}</div>
                                 <div className="text-xs text-gray-500 leading-relaxed">{stat.desc}</div>
                             </div>
@@ -46,14 +45,13 @@ export default function Impact() {
                     <div className="bg-dark-800/70 border border-white/10 rounded-3xl p-8">
                         <p className="text-xs font-bold tracking-widest uppercase text-gray-500 mb-2">Kurumsal Kazanımlar</p>
                         <h3 className="text-2xl font-bold text-white mb-8">
-                            SafeVox sadece bir yazılım değil,{' '}
-                            <span className="text-safe-400">stratejik bir ortaktır</span>
+                            SafeVox sadece bir yazılım değil, stratejik bir ortaktır
                         </h3>
                         <ul className="space-y-4">
                             {gains.map((item, i) => (
                                 <li key={i} className="flex items-center gap-3.5 text-gray-300 text-sm">
-                                    <div className="w-6 h-6 rounded-full bg-safe-500/15 flex items-center justify-center shrink-0 border border-safe-500/20">
-                                        <div className="w-2 h-2 rounded-full bg-safe-500" />
+                                    <div className="w-6 h-6 rounded-full bg-white/8 flex items-center justify-center shrink-0 border border-white/10">
+                                        <div className="w-2 h-2 rounded-full bg-white/60" />
                                     </div>
                                     {item}
                                 </li>

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Mic, Activity, ArrowUpRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Mic, ArrowUpRight } from 'lucide-react';
 
 const quickLinks = [
     { name: 'Ana Sayfa',  href: '/' },
@@ -9,9 +9,7 @@ const quickLinks = [
 ];
 
 const socialLinks = [
-    { Icon: Github,   href: '#',                                              label: 'GitHub' },
     { Icon: Linkedin, href: 'https://www.linkedin.com/company/safe-vox/', label: 'LinkedIn' },
-    { Icon: Twitter,  href: '#',                                              label: 'Twitter' },
 ];
 
 const contactItems = [
@@ -31,12 +29,11 @@ export default function Footer() {
                     {/* Brand */}
                     <div className="col-span-1 lg:col-span-2">
                         <Link to="/" className="flex items-center gap-2.5 mb-5 group w-fit">
-                            <div className="relative flex items-center justify-center w-9 h-9 bg-gradient-to-br from-safe-500 to-vox-600 rounded-xl shadow-lg shadow-safe-500/20">
-                                <Mic className="w-4 h-4 text-white absolute" />
-                                <Activity className="w-4 h-4 text-white/40 absolute animate-pulse" />
+                            <div className="flex items-center justify-center w-9 h-9 bg-white/8 border border-white/15 rounded-xl transition-all duration-300 group-hover:bg-white/12">
+                                <Mic className="w-4 h-4 text-white" />
                             </div>
                             <span className="text-xl font-display font-bold tracking-tight text-white">
-                                Safe<span className="bg-clip-text text-transparent bg-gradient-to-r from-safe-400 to-vox-400">Vox</span>
+                                SafeVox
                             </span>
                         </Link>
 
@@ -53,9 +50,9 @@ export default function Footer() {
                                     aria-label={label}
                                     target={href !== '#' ? '_blank' : undefined}
                                     rel="noreferrer"
-                                    className="w-9 h-9 rounded-xl bg-white/5 border border-white/8 flex items-center justify-center hover:bg-safe-500/15 hover:border-safe-500/30 transition-all group"
+                                    className="w-9 h-9 rounded-xl bg-white/5 border border-white/8 flex items-center justify-center hover:bg-white/10 hover:border-white/20 transition-all group"
                                 >
-                                    <Icon className="w-4 h-4 text-gray-500 group-hover:text-safe-400 transition-colors" />
+                                    <Icon className="w-4 h-4 text-gray-500 group-hover:text-white transition-colors" />
                                 </a>
                             ))}
                         </div>
@@ -90,12 +87,12 @@ export default function Footer() {
                                             href={href}
                                             className="flex items-start gap-2.5 text-gray-500 hover:text-white transition-colors group"
                                         >
-                                            <Icon className="w-4 h-4 text-safe-500/60 shrink-0 mt-0.5 group-hover:text-safe-400 transition-colors" />
+                                            <Icon className="w-4 h-4 text-gray-600 shrink-0 mt-0.5 group-hover:text-gray-400 transition-colors" />
                                             <span className="text-sm">{text}</span>
                                         </a>
                                     ) : (
                                         <div className="flex items-start gap-2.5 text-gray-500">
-                                            <Icon className="w-4 h-4 text-safe-500/60 shrink-0 mt-0.5" />
+                                            <Icon className="w-4 h-4 text-gray-600 shrink-0 mt-0.5" />
                                             <span className="text-sm">{text}</span>
                                         </div>
                                     )}

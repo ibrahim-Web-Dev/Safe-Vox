@@ -75,8 +75,7 @@ export default function Features() {
                     </span>
 
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-5">
-                        Geleceğin Çağrı Merkezi{' '}
-                        <span className="text-safe-300">Teknolojisi</span>
+                        Geleceğin Çağrı Merkezi Teknolojisi
                     </h2>
 
                     <p className="text-lg text-gray-400 max-w-2xl mx-auto">

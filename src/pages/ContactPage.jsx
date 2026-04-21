@@ -69,15 +69,12 @@ export default function ContactPage() {
                         transition={{ duration: 0.7 }}
                         className="max-w-2xl mx-auto"
                     >
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-safe-500/10 border border-safe-500/20 text-safe-400 text-sm font-medium mb-6">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-400 text-sm font-medium mb-6">
                             <MessageSquare className="w-4 h-4" />
                             İletişim
                         </div>
-                        <h1 className="text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight">
-                            Sizinle{' '}
-                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-safe-400 to-vox-400">
-                                Konuşalım
-                            </span>
+                        <h1 className="text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight text-white">
+                            Sizinle Konuşalım
                         </h1>
                         <p className="text-xl text-gray-400 leading-relaxed">
                             Demo talebi, iş birliği veya herhangi bir sorunuz için bize ulaşın.
@@ -127,14 +124,14 @@ export default function ContactPage() {
                             </div>
 
                             {/* Quick info boxes */}
-                            <div className="bg-gradient-to-br from-safe-500/10 to-vox-500/10 border border-safe-500/20 rounded-3xl p-8">
+                            <div className="bg-white/4 border border-white/10 rounded-3xl p-8">
                                 <h3 className="text-lg font-bold text-white mb-3">Demo Talebi</h3>
                                 <p className="text-gray-400 text-sm leading-relaxed mb-4">
                                     SafeVox'u kurumunuzda nasıl kullanabileceğinizi görmek için
                                     ücretsiz demo talep edebilirsiniz. 30 dakikalık online
                                     toplantıyla sistemi canlı tanıyın.
                                 </p>
-                                <div className="flex items-center gap-2 text-safe-400 text-sm font-medium">
+                                <div className="flex items-center gap-2 text-gray-300 text-sm font-medium">
                                     <CheckCircle className="w-4 h-4" />
                                     <span>Ücretsiz &amp; Taahhütsüz</span>
                                 </div>
@@ -178,7 +175,7 @@ export default function ContactPage() {
                                             <div className="grid md:grid-cols-2 gap-5">
                                                 <div>
                                                     <label className="block text-sm font-medium text-gray-400 mb-2">
-                                                        Ad Soyad <span className="text-safe-400">*</span>
+                                                        Ad Soyad <span className="text-gray-500">*</span>
                                                     </label>
                                                     <input
                                                         type="text"
@@ -192,7 +189,7 @@ export default function ContactPage() {
                                                 </div>
                                                 <div>
                                                     <label className="block text-sm font-medium text-gray-400 mb-2">
-                                                        E-posta <span className="text-safe-400">*</span>
+                                                        E-posta <span className="text-gray-500">*</span>
                                                     </label>
                                                     <input
                                                         type="email"
@@ -237,7 +234,7 @@ export default function ContactPage() {
 
                                             <div>
                                                 <label className="block text-sm font-medium text-gray-400 mb-2">
-                                                    Konu <span className="text-safe-400">*</span>
+                                                    Konu <span className="text-gray-500">*</span>
                                                 </label>
                                                 <select
                                                     name="subject"
@@ -257,7 +254,7 @@ export default function ContactPage() {
 
                                             <div>
                                                 <label className="block text-sm font-medium text-gray-400 mb-2">
-                                                    Mesajınız <span className="text-safe-400">*</span>
+                                                    Mesajınız <span className="text-gray-500">*</span>
                                                 </label>
                                                 <textarea
                                                     name="message"
@@ -273,7 +270,7 @@ export default function ContactPage() {
                                             <button
                                                 type="submit"
                                                 disabled={loading}
-                                                className="w-full flex items-center justify-center gap-3 py-4 bg-gradient-to-r from-safe-600 to-vox-600 rounded-xl font-bold text-white hover:opacity-90 transition-all shadow-lg shadow-safe-500/25 disabled:opacity-60 disabled:cursor-not-allowed"
+                                                className="w-full flex items-center justify-center gap-3 py-4 bg-white text-dark-900 rounded-xl font-bold hover:bg-white/90 transition-all shadow-lg shadow-white/10 disabled:opacity-60 disabled:cursor-not-allowed"
                                             >
                                                 {loading ? (
                                                     <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />

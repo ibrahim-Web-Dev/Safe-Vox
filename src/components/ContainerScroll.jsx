@@ -138,9 +138,7 @@ export default function ContainerScrollSection() {
                             Canlı Dashboard
                         </span>
                         <h2 className="text-4xl md:text-6xl font-bold text-white font-display">
-                            Tüm Kontrolü
-                            <br />
-                            <span className="text-safe-300">Elinizde Tutun</span>
+                            Tüm Kontrolü Elinizde Tutun
                         </h2>
                         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
                             Gerçek zamanlı ses analizi, AI koçluk önerileri ve performans raporları tek ekranda.

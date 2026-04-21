@@ -185,8 +185,7 @@ export default function RadialOrbitalTimeline() {
                     Nasıl Çalışır?
                 </span>
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-display">
-                    5 Adımda{' '}
-                    <span className="text-safe-300">Akıllı Koçluk</span>
+                    5 Adımda Akıllı Koçluk
                 </h2>
                 <p className="text-gray-400 max-w-xl mx-auto hidden md:block">Bir düğüme tıklayarak ayrıntıları keşfedin</p>
             </div>
