@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const defaultShaderSource = `#version 300 es
 precision highp float;
@@ -205,12 +206,14 @@ export default function AnimatedShaderHero({
   trustBadge = null,
   headline = { line1: 'Geleneksel Denetimi Yıkan', line2: 'Dijital Koç' },
   subtitle = 'Müşteri temsilcilerinizi geliştiren yapay zeka. Duygu analizi, stres yönetimi ve otonom eğitim modülleriyle operasyonel verimliliği zirveye çıkarın.',
-  buttons = {
-    primary: { text: 'Hemen Keşfet', onClick: () => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' }) },
-    secondary: { text: 'Demo Talep Et', onClick: () => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) },
-  },
+  buttons: buttonsProp = null,
   className = '',
 }) {
+  const navigate = useNavigate();
+  const buttons = buttonsProp ?? {
+    primary: { text: 'Hemen Keşfet', onClick: () => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' }) },
+    secondary: { text: 'Demo Talep Et', onClick: () => navigate('/iletisim') },
+  };
   const canvasRef = useShaderBackground();
 
   return (
@@ -258,7 +261,7 @@ export default function AnimatedShaderHero({
               {buttons.primary && (
                 <button
                   onClick={buttons.primary.onClick}
-                  className="px-8 py-4 bg-white text-dark-900 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 hover:bg-white/90 hover:shadow-xl hover:shadow-white/20"
+                  className="cursor-pointer px-8 py-4 bg-white text-dark-900 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 hover:bg-white/90 hover:shadow-xl hover:shadow-white/20"
                 >
                   {buttons.primary.text}
                 </button>
@@ -266,7 +269,7 @@ export default function AnimatedShaderHero({
               {buttons.secondary && (
                 <button
                   onClick={buttons.secondary.onClick}
-                  className="px-8 py-4 bg-transparent border-2 border-white/60 hover:border-white hover:bg-white/10 text-white rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                  className="cursor-pointer px-8 py-4 bg-transparent border-2 border-white/60 hover:border-white hover:bg-white/10 text-white rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
                 >
                   {buttons.secondary.text}
                 </button>
