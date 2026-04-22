@@ -37,10 +37,23 @@ const profiles = {
     },
 };
 
-function downloadVCard(person) {
+async function downloadVCard(person) {
     const [firstName, ...rest] = person.name.split(' ');
     const lastName = rest.join(' ') + ' - SafeVox';
-    const vcard = [
+
+    let photoLine = '';
+    try {
+        const res = await fetch(person.image);
+        const imgBlob = await res.blob();
+        const base64 = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(reader.result.split(',')[1]);
+            reader.readAsDataURL(imgBlob);
+        });
+        photoLine = `\r\nPHOTO;ENCODING=b;TYPE=JPEG:${base64}`;
+    } catch {}
+
+    const lines = [
         'BEGIN:VCARD',
         'VERSION:3.0',
         `FN:${firstName} ${lastName}`,
@@ -49,8 +62,10 @@ function downloadVCard(person) {
         `TEL;TYPE=CELL:+9${person.phone}`,
         `EMAIL:${person.email}`,
         `URL:https://safevox.tr`,
-        'END:VCARD',
-    ].join('\r\n');
+    ];
+    if (photoLine) lines.push(photoLine.trim());
+    lines.push('END:VCARD');
+    const vcard = lines.join('\r\n');
 
     const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
     const url = URL.createObjectURL(blob);
