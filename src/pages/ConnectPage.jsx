@@ -38,18 +38,19 @@ const profiles = {
 };
 
 function downloadVCard(person) {
+    const [firstName, ...rest] = person.name.split(' ');
+    const lastName = rest.join(' ') + ' - SafeVox';
     const vcard = [
         'BEGIN:VCARD',
         'VERSION:3.0',
-        `FN:${person.name} - SafeVox`,
+        `FN:${firstName} ${lastName}`,
+        `N:${lastName};${firstName};;;`,
         `ORG:SafeVox`,
-        `TITLE:${person.role}`,
         `TEL;TYPE=CELL:+9${person.phone}`,
         `EMAIL:${person.email}`,
         `URL:https://safevox.tr`,
-        `NOTE:SafeVox - Yapay Zeka Destekli Çağrı Merkezi Koçluğu`,
         'END:VCARD',
-    ].join('\n');
+    ].join('\r\n');
 
     const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
     const url = URL.createObjectURL(blob);
