@@ -41,7 +41,7 @@ function downloadVCard(person) {
     const vcard = [
         'BEGIN:VCARD',
         'VERSION:3.0',
-        `FN:${person.name}`,
+        `FN:${person.name} - SafeVox`,
         `ORG:SafeVox`,
         `TITLE:${person.role}`,
         `TEL;TYPE=CELL:+9${person.phone}`,
