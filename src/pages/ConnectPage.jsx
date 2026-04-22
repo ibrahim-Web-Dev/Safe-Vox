@@ -157,8 +157,23 @@ function ProfileCard({ person }) {
                     Rehbere Ekle
                 </button>
 
-                {/* Phone display */}
-                <p className="text-white/30 text-sm">{person.phoneDisplay}</p>
+                {/* Contact info */}
+                <div className="w-full space-y-2">
+                    <a
+                        href={`tel:+9${person.phone}`}
+                        className="flex items-center gap-3 w-full px-4 py-3 bg-white/4 border border-white/8 rounded-xl hover:bg-white/7 transition-colors"
+                    >
+                        <Phone className="w-4 h-4 text-white/40 shrink-0" />
+                        <span className="text-white/80 text-sm font-medium">{person.phoneDisplay}</span>
+                    </a>
+                    <a
+                        href={`mailto:${person.email}`}
+                        className="flex items-center gap-3 w-full px-4 py-3 bg-white/4 border border-white/8 rounded-xl hover:bg-white/7 transition-colors"
+                    >
+                        <Mail className="w-4 h-4 text-white/40 shrink-0" />
+                        <span className="text-white/80 text-sm font-medium">{person.email}</span>
+                    </a>
+                </div>
             </div>
 
             {/* Footer */}
